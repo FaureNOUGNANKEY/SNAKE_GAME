@@ -13,6 +13,7 @@ Ce projet est une implémentation du célèbre jeu **Snake** en Python. Le joueu
 ---
 <img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/24c55e89-6013-424e-b066-56b8cd668fe9" />
 <img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/9d6df0a8-7fda-4a92-9d76-d4e72624316a" />
+
 ## 🎮 Fonctionnalités
 
 - Déplacement fluide du serpent avec les touches directionnelles
