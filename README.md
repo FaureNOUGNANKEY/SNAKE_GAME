@@ -11,8 +11,9 @@ Un jeu Snake classique développé en Python avec la bibliothèque **Pygame**.
 Ce projet est une implémentation du célèbre jeu **Snake** en Python. Le joueur contrôle un serpent qui doit manger de la nourriture pour grandir et augmenter son score, tout en évitant les murs et son propre corps.
 
 ---
-<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/24c55e89-6013-424e-b066-56b8cd668fe9" />
-<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/9d6df0a8-7fda-4a92-9d76-d4e72624316a" />
+<img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/24c55e89-6013-424e-b066-56b8cd668fe9" />
+<img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/8b0979b5-db9b-4b4e-9a78-022a559bf453" />
+<img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/9d6df0a8-7fda-4a92-9d76-d4e72624316a" />
 
 ## 🎮 Fonctionnalités
 
