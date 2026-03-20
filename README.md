@@ -24,11 +24,6 @@ Ce projet est une implémentation du célèbre jeu **Snake** en Python. Le joueu
 ---
 
 
-<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/4445ba17-c65c-405d-afd4-949c1200d05a" />
-
-<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/299a2b36-e8b5-4cc7-b82a-1091589f3cb9" />
-
-
 ## ⚙️ Prérequis
 
 - Python 3.x
