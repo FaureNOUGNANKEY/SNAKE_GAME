@@ -2,8 +2,8 @@
 
 Un jeu Snake classique développé en Python avec la bibliothèque **Pygame**.
 
-![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white)
-![Pygame](https://img.shields.io/badge/Pygame-2.x-green?logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.13.1-blue?logo=python&logoColor=white)
+![Pygame](https://img.shields.io/badge/Pygame-green?logo=python&logoColor=white)
 ---
 
 ## 📋 Description
@@ -22,13 +22,14 @@ Ce projet est une implémentation du célèbre jeu **Snake** en Python. Le joueu
 - Affichage du score en temps réel
 - Écran de Game Over avec le score final
 - Possibilité de rejouer ou quitter après une partie
+- Système de pause (touche `P` ou `Espace`)
 
 ---
 
 
 ## ⚙️ Prérequis
 
-- Python 3.x
+- Python 3.13.1
 - Pygame
 
 ---
@@ -64,6 +65,7 @@ python snake.py
 | ⬇️ Flèche Bas | Aller vers le bas |
 | ⬅️ Flèche Gauche | Aller vers la gauche |
 | ➡️ Flèche Droite | Aller vers la droite |
+| `P` ou `Espace` | Mettre en pause / Reprendre |
 | `R` | Rejouer après Game Over |
 | `Q` | Quitter après Game Over |
 
@@ -95,6 +97,7 @@ Le projet est structuré autour de fonctions indépendantes :
 | `manger_nourriture()` | Vérifie si le serpent mange |
 | `gerer_clavier()` | Gère les entrées du joueur |
 | `afficher_game_over()` | Affiche l'écran de fin de partie |
+| `afficher_pause()` | Affiche l'écran de pause |
 | `boucle_principale()` | Boucle de jeu principale |
 
 ---

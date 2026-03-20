@@ -17,7 +17,8 @@ def initialiser_jeu():
     nourriture = generer_nourriture(longueur,largeur,taille_case,serpent)
     score = 0
     direction = (taille_case,0)
-    return serpent , score ,nourriture ,direction 
+    pause = False
+    return serpent , score ,nourriture ,direction ,pause
 
 def deplacer_serpent(serpent,direction):
     nouvelle_tete = (serpent[0][0] + direction[0],serpent[0][1]+ direction[1])
@@ -66,6 +67,12 @@ def afficher_score(fenetre,score):
     texte=police.render(f"score : {score}",True,"white")
     fenetre.blit(texte,position_texte)
 
+def afficher_pause(fenetre):
+    police = pygame.font.Font(None, 72)
+    texte = police.render("REPRENDRE", True, "yellow")
+    fenetre.blit(texte, texte.get_rect(center=(longueur // 2, largeur // 2)))
+    pygame.display.update()
+
 def afficher_game_over(fenetre,score):
     fenetre.fill("black")
     police_titre=pygame.font.SysFont(None,72)
@@ -93,21 +100,28 @@ def afficher_game_over(fenetre,score):
 def boucle_principale():
     fenetre= initialiser_pygame()
     clock = pygame.time.Clock()
-    serpent , score ,nourriture,direction =initialiser_jeu()
+    serpent , score ,nourriture,direction ,pause  =initialiser_jeu()
     running = True
 
     while running ==True:
         for event in pygame.event.get():
             if event.type==pygame.QUIT:
                 running=False
-            else :
-                direction = gerer_clavier(event,direction)
+            elif event.type == pygame.KEYDOWN:
+                if event.key in (pygame.K_p, pygame.K_SPACE):
+                    pause = not pause  # pause
+                else:
+                    direction = gerer_clavier(event, direction)
+        if pause:
+            afficher_pause(fenetre)  # affiche l'écran de pause
+            clock.tick(fps)
+            continue            
         deplacer_serpent(serpent,direction)
     
         if collusion_serpent(serpent) or collusion_murs(serpent, longueur, largeur):
             rejouer = afficher_game_over(fenetre, score)
             if rejouer:
-                serpent, score, nourriture, direction = initialiser_jeu()
+                serpent, score, nourriture, direction ,pause = initialiser_jeu()
             else:
                 running = False
             continue 
